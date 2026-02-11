@@ -1,0 +1,48 @@
+ @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            margin: 0; padding: 0;
+            background: #202028;
+            height: 100vh;
+            display: flex; justify-content: center; align-items: center;
+            font-family: 'Press Start 2P', cursive;
+            touch-action: none;
+            image-rendering: pixelated;
+        }
+
+        #game-boy {
+            position: relative;
+            width: 320px; height: 500px;
+            background-color: #70c5ce;
+            border: 15px solid #ddd;
+            border-radius: 10px 10px 40px 10px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2), 0 20px 40px rgba(0,0,0,0.5);
+            overflow: hidden;
+        }
+
+        canvas { display: block; width: 100%; height: 100%; }
+
+        #ui-layer {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; display: flex; flex-direction: column; align-items: center;
+        }
+
+        #score {
+            margin-top: 40px; font-size: 40px; color: white;
+            text-shadow: 4px 4px 0 #000; z-index: 10;
+        }
+        
+        #speed-indicator {
+            margin-top: 10px; font-size: 10px; color: #FF4500;
+            text-shadow: 1px 1px 0 #fff; display: none;
+            background: rgba(0,0,0,0.5); padding: 5px; border-radius: 5px;
+        }
+
+        #msg {
+            position: absolute; top: 50%; width: 100%; text-align: center;
+            color: #fff; font-size: 16px; line-height: 24px;
+            text-shadow: 2px 2px 0 #000; transform: translateY(-50%);
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
